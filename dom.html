@@ -64,9 +64,15 @@
 
         }
 
+        const buttonClick = function() {
+            const button1 = document.getElementsByTagName('button');
+            if (button1.length > 0) { // Check if there is at least one button
+                button1[0].addEventListener('click', function() { // Use the first button
+                    alert('Button clicked');
+                });
+            }
+        }
 
-
-        
         // Call the functions after the DOM is ready
         heading();
         changeheading();
@@ -74,7 +80,7 @@
         remove();
         changestyle();
         addEvent();
-
+        buttonClick();
      
     </script>
 </body>
